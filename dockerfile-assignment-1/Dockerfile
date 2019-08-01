@@ -35,6 +35,14 @@ COPY . .
 CMD ["tini", "--", "node", "./bin/www"]
 # - in the end you should be using FROM, RUN, WORKDIR, COPY, EXPOSE, and CMD commands
 
+# Solution
+# to run use 
+# docker run -it --rm -p 80:3000 --name nodedocker nodedocker
+# to run detached
+# docker run -d --rm -p 80:3000 --name nodedocker nodedocker
+
+#After deleting the image you can run remotely from the one you push to your docker hub with
+#docker run -it --rm --name nodedocker -p 80:3000 zelfick/2019basicdocker:nodedocker
 
 # Bonus Extra Credit
 # this will not have you setting up a complete image useful for local development, test, and prod
